@@ -74,7 +74,13 @@ const QuioscoProvider = ({children}) =>{
             setNombre("")
             setTotal(0)
             toast.success("Pedido Realizado Correctamente")
+            setTimeout(()=>{
+                router.push("/")
+
+            },3000)
             
+        
+          
 
         }catch(error){
             console.log(error)
