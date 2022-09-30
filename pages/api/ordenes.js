@@ -11,7 +11,7 @@ export default async function handler (req,res){
                 nombre: req.body.nombre,
                 fecha: req.body.fecha,
                 total: req.body.total,
-                pedido: req.body.pedido.json()
+                pedido: req.body.pedido
             }
         })
         res.json(orden)
