@@ -14,9 +14,6 @@ export default async function handler (req,res){
                 pedido: req.body.pedido
             }
         })
-
-
-
         res.json(orden)
     }
 }
