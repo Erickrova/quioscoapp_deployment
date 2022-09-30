@@ -8,9 +8,9 @@ export default async function handler (req,res){
         const orden = await prisma.orden.create({
             data:{
                 nombre: req.body.nombre,
+                fecha: req.body.fecha,
                 total: req.body.total,
                 pedido: req.body.pedido,
-                fecha: req.body.fecha,
             },
         })
         res.json(orden)
