@@ -31,7 +31,7 @@ const QuioscoProvider = ({children}) =>{
     
     const obtenerCategorias = async () =>{
 
-        const url = `http://localhost:3000/api/categorias`
+        const url = `/api/categorias`
         const {data} = await axios(url);
         setCategorias(data)
 
