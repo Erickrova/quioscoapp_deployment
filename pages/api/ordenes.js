@@ -13,7 +13,7 @@ export default async function handler (req,res){
                 fecha: req.body.fecha,
             },
         })
-        res.status(200).json(orden)
+        res.json(orden)
     }else{
         
         res.status(200).json({ordenes: "aqui iran las ordenes"})
