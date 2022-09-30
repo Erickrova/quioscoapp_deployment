@@ -63,7 +63,7 @@ const QuioscoProvider = ({children}) =>{
     const colocarOrden = async (e)=>{
         e.preventDefault()
         try{
-            await axios.post("/api/ordenes", {pedido,nombre,total,fecha: Date.now().toString()})
+            await axios.post("/api/ordenes", {nombre,fecha: Date.now().toString(),total,pedido})
 
             // Resetear la app
   

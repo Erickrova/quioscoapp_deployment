@@ -25,7 +25,7 @@ export default function Rotal() {
             <p className='text-2xl my-10'>Confirma tu pedido a continuacion</p>
 
             <form
-                onSubmit={e=> colocarOrden(e)}
+                onSubmit={colocarOrden}
             >
                 <div>
                     <label htmlFor="nombre" className='block uppercase text-slate-800 font-bold text-xl'>Nombre</label>
