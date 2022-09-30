@@ -4,7 +4,7 @@ import useQuiosco from '../hooks/useQuiosco'
 import { formatearDinero } from '../helpers'
 
 
-export default function total() {
+export default function Rotal() {
 
     const {pedido,nombre,setNombre,colocarOrden,total} = useQuiosco()
 
