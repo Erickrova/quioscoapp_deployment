@@ -83,7 +83,7 @@ const QuioscoProvider = ({children}) =>{
           
 
         }catch(error){
-            console.log(error)
+            console.log("hubo un error")
         }
 
     }
