@@ -15,6 +15,7 @@ export default async function handler (req,res){
         })
         res.status(200).json(orden)
     }else{
-        res.status(200).json(orden)
+        
+        res.status(200).json({ordenes: "aqui iran las ordenes"})
     }
 }
