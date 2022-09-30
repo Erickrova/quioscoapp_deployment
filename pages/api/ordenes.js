@@ -10,9 +10,9 @@ export default async function handler (req,res){
                 nombre: req.body.nombre,
                 fecha: req.body.fecha,
                 total: req.body.total,
-                pedido: req.body.pedido,
+                pedido: req.body.pedido
             },
         })
-        res.json(Orden)
+        res.status(200).json(Orden)
     }
 }
