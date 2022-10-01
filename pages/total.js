@@ -1,23 +1,19 @@
 import Layout from '../layout/Layout'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import useQuiosco from '../hooks/useQuiosco'
 import { formatearDinero } from '../helpers'
 
 
 export default function Rotal() {
 
-    const {pedido,nombre,setNombre,colocarOrden,total} = useQuiosco()
+    const {pedido,nombre,setNombre,colocarOrden,total,comprobarPedido} = useQuiosco()
 
-    const comprobarPedido = () =>{
-        return pedido.length === 0 || nombre === ""
-    }
+
 
     useEffect(()=>{
         comprobarPedido()
     },[pedido])
-
-
-    
+ 
 
     return(
         <Layout pagina={`Total y Confirmar Pedido`}>
@@ -39,6 +35,7 @@ export default function Rotal() {
                         className={`${comprobarPedido() ? "bg-indigo-100" : "bg-indigo-600 hover:bg-indigo-800 cursor-pointer"} w-full lg:w-auto px-5 py-2 rounded uppercase font-bold text-center text-white`}
                         value="confirmar pedido"
                         disabled={comprobarPedido()}
+
                     />
                 </div>
             </form>

@@ -14,7 +14,7 @@ const QuioscoProvider = ({children}) =>{
     const [modal,setModal] = useState(false)
     const [pedido,setPedido] = useState([])
     const [nombre,setNombre] = useState("")
-    const [total,setTotal] = useState(0)
+    const [total,setTotal] = useState(0)  
 
 
 
@@ -66,7 +66,7 @@ const QuioscoProvider = ({children}) =>{
             await axios({
                 method: "POST",
                 url:"/api/ordenes",
-                data:{nombre,fecha: Date.now().toString(),total,pedido}})
+                data:{nombre,fecha: Date.now().toString(),total,pedido:pedido}})
 
 
             // Resetear la app
@@ -91,6 +91,12 @@ const QuioscoProvider = ({children}) =>{
         }
 
     }
+    const comprobarPedido = () =>{
+        
+        return pedido.length === 0 || nombre === "" 
+        
+    }   
+
     useEffect(()=>{
         obtenerCategorias()
     },[])
@@ -122,7 +128,9 @@ const QuioscoProvider = ({children}) =>{
                 nombre,
                 setNombre,
                 colocarOrden,
-                total
+                total,
+                comprobarPedido
+
        
             }}
         >
